@@ -1,0 +1,9 @@
+/* reset styles */
+@import "./reset.scss";
+
+.App {
+  height: 100vh;
+  background-image: url("../imgs/app-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
