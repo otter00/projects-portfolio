@@ -6,11 +6,7 @@ export default class ArticleList extends PureComponent {
   state = {
     openArticleId: null,
   };
-  // PureComponent не обновлялся, потому что с точки зрения реакта не было перестроения
-  // пришли только пропсы со ссылкой на тот же массив
-  // поэтому лучше менять не локальную переменную, а создать новый массив
   render() {
-    console.log("---", 2);
     const articleElems = this.props.projects.map((project, index) => (
       <li
         key={project.id}
@@ -27,7 +23,9 @@ export default class ArticleList extends PureComponent {
       </li>
     ));
 
-    return <ul className={projectsListStyles.projects__list}>{articleElems}</ul>;
+    return (
+      <ul className={projectsListStyles.projects__list}>{articleElems}</ul>
+    );
   }
 
   handleClick = (openArticleId) =>

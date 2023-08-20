@@ -5,4 +5,12 @@
 
 .projects__list {
   margin: 100px 0;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

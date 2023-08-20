@@ -11,11 +11,11 @@ class Project extends PureComponent {
 
   render() {
     const { project, isOpen, onButtonClick } = this.props;
-    console.log("---", this.props);
     const body = isOpen && (
       <>
+        <span className="card-subtitle">Макет: </span>
         <a href={project.template} className="card-subtitle">
-          <span className="card-subtitle">Макет: </span> {project.template}
+          {project.template}
         </a>
         <section className="card-subtitle">{project.text}</section>
       </>
