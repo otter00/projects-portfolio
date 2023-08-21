@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from "react";
+import React, { PureComponent } from "react";
 import projectStyles from "./Project.module.scss";
 
 class Project extends PureComponent {
@@ -10,26 +10,45 @@ class Project extends PureComponent {
   }
 
   render() {
-    const { project, isOpen, onButtonClick } = this.props;
-    const body = isOpen && (
+    const { project, isOpen, isTemplate, onButtonClick } = this.props;
+
+    const templateContent = isTemplate && (
       <>
-        <span className="card-subtitle">Макет: </span>
+        <span
+          className="card-subtitle"
+          style={{ fontWeight: 600, fontSize: 18 }}
+        >
+          Макет:{" "}
+        </span>
         <a href={project.template} className="card-subtitle">
           {project.template}
         </a>
-        <section className="card-subtitle">{project.text}</section>
       </>
     );
+
+    const body = isOpen && (
+      <>
+        {templateContent}
+        <section
+          className="card-subtitle my-2"
+          style={{ fontWeight: 500, fontSize: 20 }}
+        >
+          {project.text}
+        </section>
+      </>
+    );
+
     return (
       <div
         className={["card", "mx-auto", projectStyles.project__card].join(" ")}
       >
-        <div className="card-header">
+        <div className="card-header my-1">
           <h3>
             {project.title}
             <button
               onClick={onButtonClick}
-              className="btn btn-primary btn-lg float-end"
+              className="btn btn-outline-dark btn-lg float-end"
+              style={{ fontWeight: 600 }}
             >
               {isOpen ? "close" : "open"}
             </button>
@@ -38,7 +57,7 @@ class Project extends PureComponent {
 
         <div className="card-body">
           <span className={projectStyles.github__link}>
-            <h6 className="card-subtitle">GitHub Pages link:</h6>
+            <h6 className="card-subtitle">GitHub Pages link: </h6>
             <a href={project.link} className="card-subtitle">
               {project.link}
             </a>

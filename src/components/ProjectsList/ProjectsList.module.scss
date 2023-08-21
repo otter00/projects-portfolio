@@ -1,10 +1,13 @@
 .project__item {
-  width: 50%;
+  //width: 50%;
   margin: 30px 0;
 }
 
 .projects__list {
-  margin: 100px 0;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
 
   a {
     text-decoration: none;

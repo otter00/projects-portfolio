@@ -16,8 +16,8 @@ export default class ArticleList extends PureComponent {
       >
         <Project
           project={project}
-          //defaultOpen={index === 0}
           isOpen={this.state.openArticleId === project.id}
+          isTemplate={project.template}
           onButtonClick={this.handleClick.bind(this, project.id)}
         />
       </li>
