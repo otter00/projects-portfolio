@@ -1,13 +1,9 @@
 import React, { PureComponent } from "react";
 import projectStyles from "./Project.module.scss";
 
-class Project extends PureComponent {
+export default class Project extends PureComponent {
   // PureComponent отличается от обычного Component тем,
   // что автоматически реализует перестроение с shouldComponentUpd
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const { project, isOpen, isTemplate, onButtonClick } = this.props;
@@ -68,5 +64,3 @@ class Project extends PureComponent {
     );
   }
 }
-
-export default Project;
