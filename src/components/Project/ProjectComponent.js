@@ -53,7 +53,7 @@ export default class Project extends PureComponent {
 
         <div className="card-body">
           <span className={projectStyles.github__link}>
-            <h6 className="card-subtitle">GitHub Pages link: </h6>
+            <h6 className="card-subtitle">GitHub Pages link:</h6>
             <a href={project.link} className="card-subtitle">
               {project.link}
             </a>

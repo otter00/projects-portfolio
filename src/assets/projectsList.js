@@ -34,10 +34,10 @@ export default [
   },
   {
     id: "4",
-    title: "Learn English Cards",
-    link: "https://github.com/otter00/english-cards",
+    title: "Learn English Words",
+    link: "https://github.com/otter00/typescript-cards",
     template: "",
-    text: "Четвёртый проект в рамках обучения фронтенд-разработке - проект на React, разрабатывался в разных ветках: в том числе с использованием Context, MobX.",
+    text: "Четвёртый проект в рамках обучения фронтенд-разработке - проект на React, разрабатывался в разных ветках: в том числе с использованием Context, MobX. В данный момент переписан на TypeScript для отработки навыков.",
   },
   {
     id: "5",
