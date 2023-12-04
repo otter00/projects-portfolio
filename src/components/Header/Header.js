@@ -1,7 +1,7 @@
 import React from "react";
 import headerStyles from "./Header.module.scss";
 import Img from "../../UI/ImageComponent/ImageComponent";
-import imageProfile from "../../imgs/profile.jpg";
+import imageProfile from "../../imgs/profile_new.jpg";
 
 export default function Header() {
   return (
