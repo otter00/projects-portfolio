@@ -35,7 +35,7 @@ export default [
   {
     id: "4",
     title: "Learn English Words",
-    link: "https://github.com/otter00/learning-words-game",
+    link: "https://otter00.github.io/learning-words-game/",
     template: "",
     text: "Четвёртый проект в рамках обучения фронтенд-разработке - проект на React, игра для изучения английских слов в карточках. Имеется функционал добавления, удаления, редактирования отдельного слова. Все слова взяты с индивидуального API.",
   },
